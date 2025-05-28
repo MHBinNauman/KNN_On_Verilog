@@ -1,0 +1,618 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: top_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_module"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : top_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\nearest_neighbour.v" into library work
+Parsing module <nearest_neighbour>.
+Analyzing Verilog file "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\major_calc.v" into library work
+Parsing module <major_calc>.
+Analyzing Verilog file "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\FSM_Control.v" into library work
+Parsing module <FSM_Control>.
+Analyzing Verilog file "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\dist_calc.v" into library work
+Parsing module <dist_calc>.
+Analyzing Verilog file "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\top_module.v" into library work
+Parsing module <top_module>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top_module>.
+
+Elaborating module <dist_calc>.
+
+Elaborating module <nearest_neighbour>.
+
+Elaborating module <major_calc>.
+WARNING:HDLCompiler:91 - "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\major_calc.v" Line 22: Signal <rst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\major_calc.v" Line 26: Signal <count0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\major_calc.v" Line 28: Signal <count1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\major_calc.v" Line 30: Signal <count2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <FSM_Control>.
+Reading initialization file \"training_data.mem\".
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_module>.
+    Related source file is "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\top_module.v".
+    Found 2-bit register for signal <label_reg>.
+    Found 5-bit register for signal <distance_reg>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <top_module> synthesized.
+
+Synthesizing Unit <dist_calc>.
+    Related source file is "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\dist_calc.v".
+    Found 5-bit register for signal <dist>.
+    Found 4-bit subtractor for signal <train_x[3]_data_x[3]_sub_2_OUT> created at line 23.
+    Found 4-bit subtractor for signal <data_x[3]_train_x[3]_sub_3_OUT> created at line 25.
+    Found 4-bit subtractor for signal <train_y[3]_data_y[3]_sub_6_OUT> created at line 27.
+    Found 4-bit subtractor for signal <data_y[3]_train_y[3]_sub_7_OUT> created at line 29.
+    Found 5-bit adder for signal <n0026> created at line 31.
+    Found 4-bit comparator lessequal for signal <n0000> created at line 22
+    Found 4-bit comparator lessequal for signal <n0005> created at line 26
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <dist_calc> synthesized.
+
+Synthesizing Unit <nearest_neighbour>.
+    Related source file is "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\nearest_neighbour.v".
+    Found 5-bit register for signal <k2>.
+    Found 5-bit register for signal <k3>.
+    Found 5-bit register for signal <k4>.
+    Found 5-bit register for signal <k5>.
+    Found 5-bit register for signal <k1>.
+    Found 2-bit register for signal <label_1>.
+    Found 2-bit register for signal <label_2>.
+    Found 2-bit register for signal <label_3>.
+    Found 2-bit register for signal <label_4>.
+    Found 2-bit register for signal <label_5>.
+    Found 5-bit comparator greater for signal <data_in[4]_k1[4]_LessThan_1_o> created at line 28
+    Found 5-bit comparator greater for signal <data_in[4]_k2[4]_LessThan_2_o> created at line 34
+    Found 5-bit comparator greater for signal <data_in[4]_k3[4]_LessThan_3_o> created at line 39
+    Found 5-bit comparator greater for signal <data_in[4]_k4[4]_LessThan_4_o> created at line 43
+    Found 5-bit comparator lessequal for signal <data_in[4]_k5[4]_LessThan_5_o> created at line 46
+    Summary:
+	inferred  35 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  20 Multiplexer(s).
+Unit <nearest_neighbour> synthesized.
+
+Synthesizing Unit <major_calc>.
+    Related source file is "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\major_calc.v".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit adder for signal <n0109[1:0]> created at line 16.
+    Found 2-bit adder for signal <n0121[1:0]> created at line 17.
+    Found 2-bit adder for signal <n0133[1:0]> created at line 18.
+    Found 2-bit adder for signal <n0145[1:0]> created at line 19.
+    Found 3-bit adder for signal <_n0158> created at line 14.
+    Found 3-bit adder for signal <_n0159> created at line 14.
+    Found 3-bit adder for signal <count0> created at line 14.
+    Found 3-bit adder for signal <_n0161> created at line 14.
+    Found 3-bit adder for signal <_n0162> created at line 14.
+    Found 3-bit adder for signal <count1> created at line 14.
+    Found 3-bit adder for signal <_n0164> created at line 14.
+    Found 3-bit adder for signal <_n0165> created at line 14.
+    Found 3-bit adder for signal <count2> created at line 14.
+    Found 3-bit adder for signal <_n0167> created at line 14.
+    Found 3-bit adder for signal <_n0168> created at line 14.
+    Found 3-bit adder for signal <count3> created at line 14.
+    Found 3-bit comparator lessequal for signal <n0036> created at line 26
+    Found 3-bit comparator lessequal for signal <n0038> created at line 26
+    Found 3-bit comparator lessequal for signal <n0041> created at line 26
+    Found 3-bit comparator lessequal for signal <n0044> created at line 28
+    Found 3-bit comparator lessequal for signal <n0046> created at line 28
+    Found 3-bit comparator lessequal for signal <n0049> created at line 28
+    Found 3-bit comparator lessequal for signal <n0052> created at line 30
+    Found 3-bit comparator lessequal for signal <n0054> created at line 30
+    Found 3-bit comparator lessequal for signal <n0057> created at line 30
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <major_calc> synthesized.
+
+Synthesizing Unit <FSM_Control>.
+    Related source file is "C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\FSM_Control.v".
+        RESET = 2'b00
+        LOAD_COMPUTE = 2'b01
+        FINAL_STORE = 2'b10
+        CALC_MAJOR = 2'b11
+    Set property "ram_style = distributed" for signal <training_data>.
+WARNING:Xst:2999 - Signal 'training_data', unconnected in block 'FSM_Control', is tied to its initial value.
+    Found 128x10-bit single-port Read Only RAM <Mram_training_data> for signal <training_data>.
+    Found 7-bit register for signal <counter>.
+    Found 2-bit register for signal <currentState>.
+    Found 1-bit register for signal <en_COMPUTE>.
+    Found 1-bit register for signal <en_STORE>.
+    Found 1-bit register for signal <en_MAJOR>.
+    Found 1-bit register for signal <done>.
+    Found 4-bit register for signal <train_x>.
+    Found 4-bit register for signal <train_y>.
+    Found 2-bit register for signal <label_out>.
+    Found finite state machine <FSM_0> for signal <currentState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit adder for signal <counter[6]_GND_6_o_add_5_OUT> created at line 63.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <FSM_Control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 128x10-bit single-port Read Only RAM                  : 1
+# Adders/Subtractors                                   : 20
+ 2-bit adder                                           : 4
+ 3-bit adder                                           : 12
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Registers                                            : 19
+ 1-bit register                                        : 4
+ 10-bit register                                       : 1
+ 2-bit register                                        : 6
+ 5-bit register                                        : 7
+ 7-bit register                                        : 1
+# Comparators                                          : 16
+ 3-bit comparator lessequal                            : 9
+ 4-bit comparator lessequal                            : 2
+ 5-bit comparator greater                              : 4
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 27
+ 1-bit 2-to-1 multiplexer                              : 1
+ 2-bit 2-to-1 multiplexer                              : 12
+ 4-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 10
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FSM_Control>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_training_data>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 10-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FSM_Control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <major_calc>.
+	The following adders/subtractors are grouped into adder tree <Madd_count2_Madd1> :
+ 	<Madd_n0133[1:0]> in block <major_calc>, 	<Madd__n0164> in block <major_calc>, 	<Madd_count2_Madd> in block <major_calc>.
+	The following adders/subtractors are grouped into adder tree <Madd_count3_Madd1> :
+ 	<Madd_n0145[1:0]> in block <major_calc>, 	<Madd__n0167> in block <major_calc>, 	<Madd_count3_Madd> in block <major_calc>.
+	The following adders/subtractors are grouped into adder tree <Madd_count1_Madd1> :
+ 	<Madd_n0121[1:0]> in block <major_calc>, 	<Madd__n0161> in block <major_calc>, 	<Madd_count1_Madd> in block <major_calc>.
+	The following adders/subtractors are grouped into adder tree <Madd_count0_Madd1> :
+ 	<Madd_n0109[1:0]> in block <major_calc>, 	<Madd__n0158> in block <major_calc>, 	<Madd_count0_Madd> in block <major_calc>.
+Unit <major_calc> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 128x10-bit single-port distributed Read Only RAM      : 1
+# Adders/Subtractors                                   : 3
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 1
+# Adder Trees                                          : 4
+ 3-bit / 4-inputs adder tree                           : 4
+# Counters                                             : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+# Comparators                                          : 16
+ 3-bit comparator lessequal                            : 9
+ 4-bit comparator lessequal                            : 2
+ 5-bit comparator greater                              : 4
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 31
+ 1-bit 2-to-1 multiplexer                              : 7
+ 2-bit 2-to-1 multiplexer                              : 11
+ 4-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 9
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_FSM_Control/FSM_0> on signal <currentState[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+
+Optimizing unit <top_module> ...
+
+Optimizing unit <dist_calc> ...
+
+Optimizing unit <nearest_neighbour> ...
+
+Optimizing unit <major_calc> ...
+WARNING:Xst:2677 - Node <u_FSM_Control/en_MAJOR> of sequential type is unconnected in block <top_module>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 156
+#      INV                         : 2
+#      LUT2                        : 16
+#      LUT3                        : 5
+#      LUT4                        : 17
+#      LUT5                        : 37
+#      LUT6                        : 76
+#      MUXF7                       : 2
+#      VCC                         : 1
+# FlipFlops/Latches                : 69
+#      FDC                         : 9
+#      FDCE                        : 25
+#      FDE                         : 10
+#      FDPE                        : 25
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 9
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              69  out of  18224     0%  
+ Number of Slice LUTs:                  153  out of   9112     1%  
+    Number used as Logic:               153  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    169
+   Number with an unused Flip Flop:     100  out of    169    59%  
+   Number with an unused LUT:            16  out of    169     9%  
+   Number of fully used LUT-FF pairs:    53  out of    169    31%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 69    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.851ns (Maximum Frequency: 170.911MHz)
+   Minimum input arrival time before clock: 6.357ns
+   Maximum output required time after clock: 12.843ns
+   Maximum combinational path delay: 6.145ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.851ns (frequency: 170.911MHz)
+  Total number of paths / destination ports: 1881 / 128
+-------------------------------------------------------------------------
+Delay:               5.851ns (Levels of Logic = 4)
+  Source:            u_nearest_neighbour/k2_0 (FF)
+  Destination:       u_nearest_neighbour/k5_4 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: u_nearest_neighbour/k2_0 to u_nearest_neighbour/k5_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             3   0.525   1.221  u_nearest_neighbour/k2_0 (u_nearest_neighbour/k2_0)
+     LUT6:I0->O            1   0.254   0.682  u_nearest_neighbour/data_in[4]_k2[4]_LessThan_2_o2 (u_nearest_neighbour/data_in[4]_k2[4]_LessThan_2_o1)
+     LUT5:I4->O           18   0.254   1.235  u_nearest_neighbour/data_in[4]_k2[4]_LessThan_2_o11 (u_nearest_neighbour/data_in[4]_k2[4]_LessThan_2_o)
+     LUT5:I4->O           13   0.254   1.098  u_nearest_neighbour/Mmux_k4[4]_k3[4]_mux_27_OUT11 (u_nearest_neighbour/Mmux_k4[4]_k3[4]_mux_27_OUT11)
+     LUT5:I4->O            1   0.254   0.000  u_nearest_neighbour/k4_0_dpot (u_nearest_neighbour/k4_0_dpot)
+     FDPE:D                    0.074          u_nearest_neighbour/k4_0
+    ----------------------------------------
+    Total                      5.851ns (1.615ns logic, 4.236ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 261 / 74
+-------------------------------------------------------------------------
+Offset:              6.357ns (Levels of Logic = 5)
+  Source:            data_x<0> (PAD)
+  Destination:       u_dist_calc/dist_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: data_x<0> to u_dist_calc/dist_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.328   1.431  data_x_0_IBUF (data_x_led_0_OBUF)
+     LUT6:I0->O            1   0.254   0.910  u_dist_calc/Mmux_data_x[3]_train_x[3]_mux_3_OUT_rs_xor<3>11_SW3 (N38)
+     LUT5:I2->O            2   0.235   0.726  u_dist_calc/Mmux_data_x[3]_train_x[3]_mux_3_OUT_rs_xor<3>11 (u_dist_calc/data_x[3]_train_x[3]_mux_3_OUT<3>)
+     LUT4:I3->O            1   0.254   0.910  u_dist_calc/Madd_n0026_lut<3>1 (u_dist_calc/Madd_n0026_lut<3>)
+     LUT6:I3->O            1   0.235   0.000  u_dist_calc/Madd_n0026_xor<3>11 (u_dist_calc/n0026<3>)
+     FDCE:D                    0.074          u_dist_calc/dist_3
+    ----------------------------------------
+    Total                      6.357ns (2.380ns logic, 3.977ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2403 / 3
+-------------------------------------------------------------------------
+Offset:              12.843ns (Levels of Logic = 7)
+  Source:            u_nearest_neighbour/label_3_1 (FF)
+  Destination:       res_label<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: u_nearest_neighbour/label_3_1 to res_label<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            14   0.525   1.403  u_nearest_neighbour/label_3_1 (u_nearest_neighbour/label_3_1)
+     LUT4:I0->O            3   0.254   1.196  u_major_calc/ADDERTREE_INTERNAL_Madd4_lut<0>1 (u_major_calc/ADDERTREE_INTERNAL_Madd4_lut<0>)
+     LUT5:I0->O            2   0.254   1.181  u_major_calc/ADDERTREE_INTERNAL_Madd51 (u_major_calc/ADDERTREE_INTERNAL_Madd5)
+     LUT6:I0->O            8   0.254   1.374  u_major_calc/ADDERTREE_INTERNAL_Madd5_cy<0>21 (u_major_calc/ADDERTREE_INTERNAL_Madd5_cy<0>1)
+     LUT5:I0->O            1   0.254   1.112  u_major_calc/count0[2]_count3[2]_AND_4_o52 (u_major_calc/count0[2]_count3[2]_AND_4_o52)
+     LUT6:I1->O            2   0.254   0.954  u_major_calc/count0[2]_count3[2]_AND_4_o56 (u_major_calc/count0[2]_count3[2]_AND_4_o5)
+     LUT6:I3->O            1   0.235   0.681  u_major_calc/Mmux_label_out18 (res_label_0_OBUF)
+     OBUF:I->O                 2.912          res_label_0_OBUF (res_label<0>)
+    ----------------------------------------
+    Total                     12.843ns (4.942ns logic, 7.901ns route)
+                                       (38.5% logic, 61.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               6.145ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       rst_led (PAD)
+
+  Data Path: rst to rst_led
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            61   1.328   1.905  rst_IBUF (rst_led_OBUF)
+     OBUF:I->O                 2.912          rst_led_OBUF (rst_led)
+    ----------------------------------------
+    Total                      6.145ns (4.240ns logic, 1.905ns route)
+                                       (69.0% logic, 31.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.851|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.86 secs
+ 
+--> 
+
+Total memory usage is 4497100 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

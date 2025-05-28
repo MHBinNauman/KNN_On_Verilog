@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Farzad Khan/Desktop/FPGA PROJECT/KNN_ALGORITHM/major_calc.xst" -ofn "C:/Users/Farzad Khan/Desktop/FPGA PROJECT/KNN_ALGORITHM/major_calc.syr" 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\top_module.ncd
+OUTFILE=C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM\top_module.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=C:\Users\lab\Desktop\FPGA PROJECT\KNN_ALGORITHM
+LICENSE=WebPack
+USER_INFO=__0_0_0

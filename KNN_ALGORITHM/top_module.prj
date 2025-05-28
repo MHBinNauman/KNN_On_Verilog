@@ -1,0 +1,5 @@
+verilog work "nearest_neighbour.v"
+verilog work "major_calc.v"
+verilog work "FSM_Control.v"
+verilog work "dist_calc.v"
+verilog work "top_module.v"

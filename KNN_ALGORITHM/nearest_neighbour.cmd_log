@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Farzad Khan/Desktop/FPGA PROJECT/KNN_ALGORITHM/nearest_neighbour.xst" -ofn "C:/Users/Farzad Khan/Desktop/FPGA PROJECT/KNN_ALGORITHM/nearest_neighbour.syr" 
+xst -intstyle ise -ifn "C:/Users/Farzad Khan/Desktop/FPGA PROJECT/KNN_ALGORITHM/nearest_neighbour.xst" -ofn "C:/Users/Farzad Khan/Desktop/FPGA PROJECT/KNN_ALGORITHM/nearest_neighbour.syr" 

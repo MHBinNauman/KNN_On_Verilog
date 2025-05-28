@@ -1,0 +1,25 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/tb_top_module_isim_beh.exe -prj C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/tb_top_module_beh.prj work.tb_top_module work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/nearest_neighbour.v" into library work
+Analyzing Verilog file "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/major_calc.v" into library work
+Analyzing Verilog file "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/FSM_Control.v" into library work
+Analyzing Verilog file "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/dist_calc.v" into library work
+Analyzing Verilog file "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/top_module.v" into library work
+Analyzing Verilog file "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/tb_top_module.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module dist_calc
+Compiling module nearest_neighbour
+Compiling module major_calc
+Compiling module FSM_Control
+Compiling module top_module
+Compiling module tb_top_module
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+ERROR:Simulator:904 - Unable to remove previous simulation file isim/tb_top_module_isim_beh.exe.sim/tb_top_module_isim_beh.exe. Please check if you have another instance of this simulation running on your system, terminate it and then recompile your design. System Error Message: boost::filesystem::remove: Access is denied: "isim\tb_top_module_isim_beh.exe.sim\tb_top_module_isim_beh.exe"
+ERROR:Simulator:861 - Failed to link the design

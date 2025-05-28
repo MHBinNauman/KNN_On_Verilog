@@ -1,0 +1,60 @@
+//! **************************************************************************
+// Written by: Map P.58f on Wed Apr 23 16:21:26 2025
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "data_x<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "data_x<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "data_x<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "data_x<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "data_y<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "data_y<1>" LOCATE = SITE "U8" LEVEL 1;
+COMP "res_label<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "data_y<2>" LOCATE = SITE "V8" LEVEL 1;
+COMP "res_label<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "data_y<3>" LOCATE = SITE "T5" LEVEL 1;
+COMP "data_x_led<0>" LOCATE = SITE "M11" LEVEL 1;
+COMP "data_x_led<1>" LOCATE = SITE "N11" LEVEL 1;
+COMP "done" LOCATE = SITE "V15" LEVEL 1;
+COMP "data_y_led<0>" LOCATE = SITE "R11" LEVEL 1;
+COMP "data_y_led<1>" LOCATE = SITE "T11" LEVEL 1;
+COMP "rst_led" LOCATE = SITE "U15" LEVEL 1;
+COMP "rst" LOCATE = SITE "B8" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "label_reg_0" BEL "label_reg_1" BEL "distance_reg_0"
+        BEL "distance_reg_1" BEL "distance_reg_2" BEL "distance_reg_3" BEL
+        "distance_reg_4" BEL "u_FSM_Control/counter_6" BEL
+        "u_FSM_Control/counter_5" BEL "u_FSM_Control/counter_4" BEL
+        "u_FSM_Control/counter_3" BEL "u_FSM_Control/counter_2" BEL
+        "u_FSM_Control/counter_1" BEL "u_FSM_Control/counter_0" BEL
+        "u_FSM_Control/currentState_FSM_FFd1" BEL
+        "u_FSM_Control/currentState_FSM_FFd2" BEL "u_FSM_Control/label_out_1"
+        BEL "u_FSM_Control/label_out_0" BEL "u_FSM_Control/train_y_3" BEL
+        "u_FSM_Control/train_y_2" BEL "u_FSM_Control/train_y_1" BEL
+        "u_FSM_Control/train_y_0" BEL "u_FSM_Control/train_x_3" BEL
+        "u_FSM_Control/train_x_2" BEL "u_FSM_Control/train_x_1" BEL
+        "u_FSM_Control/train_x_0" BEL "u_FSM_Control/en_COMPUTE" BEL
+        "u_FSM_Control/done" BEL "u_FSM_Control/en_STORE" BEL
+        "u_dist_calc/dist_4" BEL "u_dist_calc/dist_3" BEL "u_dist_calc/dist_2"
+        BEL "u_dist_calc/dist_1" BEL "u_dist_calc/dist_0" BEL
+        "u_nearest_neighbour/label_5_1" BEL "u_nearest_neighbour/label_5_0"
+        BEL "u_nearest_neighbour/k5_4" BEL "u_nearest_neighbour/k5_3" BEL
+        "u_nearest_neighbour/k5_2" BEL "u_nearest_neighbour/k5_1" BEL
+        "u_nearest_neighbour/k5_0" BEL "u_nearest_neighbour/label_4_1" BEL
+        "u_nearest_neighbour/label_4_0" BEL "u_nearest_neighbour/k4_4" BEL
+        "u_nearest_neighbour/k4_3" BEL "u_nearest_neighbour/k4_2" BEL
+        "u_nearest_neighbour/k4_1" BEL "u_nearest_neighbour/k4_0" BEL
+        "u_nearest_neighbour/label_3_1" BEL "u_nearest_neighbour/label_3_0"
+        BEL "u_nearest_neighbour/k3_4" BEL "u_nearest_neighbour/k3_3" BEL
+        "u_nearest_neighbour/k3_2" BEL "u_nearest_neighbour/k3_1" BEL
+        "u_nearest_neighbour/k3_0" BEL "u_nearest_neighbour/label_2_1" BEL
+        "u_nearest_neighbour/label_2_0" BEL "u_nearest_neighbour/k2_4" BEL
+        "u_nearest_neighbour/k2_3" BEL "u_nearest_neighbour/k2_2" BEL
+        "u_nearest_neighbour/k2_1" BEL "u_nearest_neighbour/k2_0" BEL
+        "u_nearest_neighbour/label_1_1" BEL "u_nearest_neighbour/label_1_0"
+        BEL "u_nearest_neighbour/k1_4" BEL "u_nearest_neighbour/k1_3" BEL
+        "u_nearest_neighbour/k1_2" BEL "u_nearest_neighbour/k1_1" BEL
+        "u_nearest_neighbour/k1_0" BEL "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

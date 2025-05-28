@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/tb_top_module_isim_beh.exe" -prj "C:/Users/lab/Desktop/FPGA PROJECT/KNN_ALGORITHM/tb_top_module_beh.prj" "work.tb_top_module" "work.glbl" 
