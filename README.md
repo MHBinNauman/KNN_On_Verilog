@@ -37,3 +37,6 @@ An efficient Verilog-based hardware implementation of the K-Nearest Neighbors (K
 - 🔌 **Board**: Nexys 3 FPGA (Spartan-6)
 - 🧠 Input Classification is triggered by UART commands
 
+## 💻 FPGA Output
+
+![FPGA Output](Static/FPGA%20Demonstration%20of%20KNN%20on%20NEXYS%203.gif)
